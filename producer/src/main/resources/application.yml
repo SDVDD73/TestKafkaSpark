@@ -1,0 +1,1 @@
+server.port: 8088spring:  kafka:    bootstrap-servers: localhost:9092    template:      default-topic: Topic1

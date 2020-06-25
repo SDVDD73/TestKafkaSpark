@@ -1,0 +1,25 @@
+spring:
+
+  application:
+    name: producer-consumer-spark-kafka
+
+  kafka:
+    bootstrap-servers: localhost:9092
+    consumer:
+      group-id: group-0
+    template:
+      default-topic: Topic1
+
+spark.driver.memory: 1g
+spark.worker.memory: 1g
+spark.executor.memory: 1g
+spark.rpc.message.maxSize: 1024
+spark.kafka.topics: Topic1,Topic2
+
+# Интервал времени для извлечения данных из кафки, с
+spark.stream.kafka.durations: 10s
+
+# установить реальный хост!
+spark.master: local[2]
+#spark.master: spark://localhost:7077
+#spark.master: spark://spark:7077
